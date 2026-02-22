@@ -34,17 +34,17 @@ Hourly measurements
 
 - Features:
 
-        date_time (timestamp)
+    date_time (timestamp)
 
-        holiday (official holiday indicator)
+    holiday (official holiday indicator)
 
-        temp (temperature in Kelvin)
+    temp (temperature in Kelvin)
 
-        rain and snow
+    rain and snow
 
-        clouds_all (cloud coverage)
+    clouds_all (cloud coverage)
 
-        weather_main (weather condition)
+    weather_main (weather condition)
 
 ---
 
@@ -78,21 +78,21 @@ traffic-volume-forecasting/
 
 ## ⚙️ Setup
 
-    Clone the repository:
+Clone the repository:
 
 ```bash
 
 git clone git@github.com:hasanbahcecii/traffic-volume-forecasting.git
 cd traffic-volume-forecasting
 ```
-    Create and activate a virtual environment:
+Create and activate a virtual environment:
 
 ```bash
 
 python3 -m venv venv
 source venv/bin/activate
 ```
-    Install dependencies:
+Install dependencies:
 
 ```bash
 
@@ -103,43 +103,43 @@ pip install -r requirements.txt
 
 ## 🚀 Usage
 
-    Data Analysis
+Data Analysis
 
 ```bash
 
 python load_and_explore.py
 ```
-    Preprocessing
+Preprocessing
 
 ```bash
 
 python preprocessing.py
 ```
-    Model Training
+Model Training
 
 ```bash
 
 python train.py
 ```
-    Model Testing
+Model Testing
 
 ```bash
 
 python test.py
 ```
-    Run FastAPI Service
+Run FastAPI Service
 
 ```bash
 
 uvicorn main_api:app --reload
 ```
-    Test FastAPI Requests
+Test FastAPI Requests
 
 ```bash
 
 python test_requests.py
 ```
-    Launch Streamlit App
+Launch Streamlit App
 
 ```bash
 
