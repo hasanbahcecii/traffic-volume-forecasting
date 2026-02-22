@@ -39,3 +39,10 @@ dist/
 
 # All CSV datasets
 *.csv
+
+# Saved scaler objects
+scaler_X.save
+scaler_y.save
+
+# train and test data
+*.npy
