@@ -58,8 +58,8 @@ X_train = X_seq[:split_idx]
 y_train = y_seq[:split_idx]
 
 # test data
-X_test = X_seq[split_idx]
-y_test = y_seq[split_idx]
+X_test = X_seq[split_idx:]
+y_test = y_seq[split_idx:]
 
 np.save("X_train.npy", X_train)
 np.save("y_train.npy", y_train)

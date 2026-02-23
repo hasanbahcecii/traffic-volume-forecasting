@@ -39,7 +39,7 @@ class GRUNet(nn.Module):
         self.fc = nn.Linear(hidden_size, output_size)
 
 
-    def forward(self, X): # X_shape: (batch_size, seq_len, hidden_size)
+    def forward(self, X): # X_shape: (batch_size, seq_len, input_size)
         out, _ = self.gru(X) # out = (batch_size, seq_len, hidden_size)
         last_out = out[:, -1, :] # out = (all, last one, all)
         out = self.fc(last_out)
@@ -54,7 +54,7 @@ criterion = nn.MSELoss() # mean square entopy loss
 optimizer = optim.Adam(model.parameters(), lr=LEARNING_RATE)
 
 # train loop
-lost_list = [] # keep loss for each epoch 
+loss_list = [] # keep loss for each epoch 
 
 for epoch in range(NUM_EPOCHS):
     model.train() # train mode
@@ -77,13 +77,13 @@ for epoch in range(NUM_EPOCHS):
         epoch_loss += loss.item()
 
     avg_loss = epoch_loss / len(train_loader)    
-    lost_list.append(avg_loss)
+    loss_list.append(avg_loss)
     print(f"Epoch: [{epoch + 1}/{NUM_EPOCHS}], Loss: {avg_loss: .4f}")
 
     
 # loss graph
 plt.figure()
-plt.plot(lost_list, marker = "o")
+plt.plot(loss_list, marker = "o")
 plt.title("Train Loss Graph")
 plt.xlabel("Epoch")
 plt.ylabel("Loss")
