@@ -84,3 +84,13 @@ for epoch in range(NUM_EPOCHS):
 # loss graph
 plt.figure()
 plt.plot(lost_list, marker = "o")
+plt.title("Train Loss Graph")
+plt.xlabel("Epoch")
+plt.ylabel("Loss")
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+
+# save the model
+torch.save(model.state_dict(), "gru_model.pth")
+print("Model saved successfully.")
