@@ -46,3 +46,6 @@ scaler_y.save
 
 # train and test data
 *.npy
+
+# model file
+*.pth
