@@ -39,7 +39,7 @@ with st.form("manual_input_form"):
 # send request to FastAPI if submitted
 if submitted:
     # FastAPI endpoint
-    url = "http://localhost:8000/predict"  # kendi API adresini buraya yaz
+    url = "http://localhost:8000/predict"  
 
     payload = {"sequence": sequence_input}
     try:
