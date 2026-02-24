@@ -49,3 +49,6 @@ scaler_y.save
 
 # model file
 *.pth
+
+# remove helper
+sample.txt
