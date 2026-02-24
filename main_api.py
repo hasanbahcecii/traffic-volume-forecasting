@@ -73,7 +73,7 @@ for i in range(24):
     rain = 0
     snow = 0
     clouds = random.randint(0, 100)
-    hour = 1
+    hour = i
     dayofweek = random.randint(0, 6)
     month = 10
     sample_sequence.append([temp, rain, snow, clouds, hour, dayofweek, month])
