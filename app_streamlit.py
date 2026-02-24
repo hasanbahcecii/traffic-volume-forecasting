@@ -46,7 +46,7 @@ if submitted:
         response = requests.post(url, json=payload)
         if response.status_code == 200:
             result = response.json()
-            st.success(f"Predicted Traffic Volume: {result['predicted_traffic_volume']:.2f}")
+            st.success(f"Predicted Traffic Volume: {result['predicted_traffic_volume']:.2f}  vehicle/hour")
         else:
             st.error(f"Error: {response.text}")
     except Exception as e:
