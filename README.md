@@ -26,7 +26,7 @@ By anticipating traffic volume, transportation systems can be better managed, le
 
 - Time period: 2012–2018
 
-Hourly measurements
+**Hourly measurements**
 
 - ~48,000 samples
 
@@ -34,17 +34,17 @@ Hourly measurements
 
 - Features:
 
-    date_time (timestamp)
+    - date_time (timestamp)
 
-    holiday (official holiday indicator)
+    - holiday (official holiday indicator)
 
-    temp (temperature in Kelvin)
+    - temp (temperature in Kelvin)
 
-    rain and snow
+    - rain and snow
 
-    clouds_all (cloud coverage)
+    - clouds_all (cloud coverage)
 
-    weather_main (weather condition)
+    - weather_main (weather condition)
 
 ---
 
@@ -103,43 +103,43 @@ pip install -r requirements.txt
 
 ## 🚀 Usage
 
-Data Analysis
+**Data Analysis**
 
 ```bash
 
 python load_and_explore.py
 ```
-Preprocessing
+**Preprocessing**
 
 ```bash
 
 python preprocessing.py
 ```
-Model Training
+**Model Training**
 
 ```bash
 
 python train.py
 ```
-Model Testing
+**Model Testing**
 
 ```bash
 
 python test.py
 ```
-Run FastAPI Service
+**Run FastAPI Service**
 
 ```bash
 
 uvicorn main_api:app --reload
 ```
-Test FastAPI Requests
+**Test FastAPI Requests**
 
 ```bash
 
 python test_requests.py
 ```
-Launch Streamlit App
+**Launch Streamlit App**
 
 ```bash
 
